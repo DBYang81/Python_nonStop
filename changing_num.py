@@ -1,6 +1,3 @@
-from re import T
-
-
 print("Calculator")
 fnum = int(input("Give the first number: "))
 snum = int(input("Give the second number: "))
