@@ -1,3 +1,5 @@
+import time
+
 while True:
     print(" (1) Read the notebook \n (2) Add note\n (3) Empty the notebook\n (4) Quit\n")
     choice = input("Please select one: ")
@@ -10,8 +12,7 @@ while True:
     elif choice == "2":
         file = open("notebook.txt", "a")
         nt = input("Write a new note: ")
-        file.write(nt)
-        file.write("\n")
+        file.write(nt + ":::" + time.strftime("%X %x") + "\n")
         file.close()
     elif choice == "3":
         file = open("notebook.txt", "w")
